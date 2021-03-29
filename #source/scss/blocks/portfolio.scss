@@ -1,0 +1,126 @@
+.portfolio {
+	margin-bottom: 100px;
+	&__slider {
+		margin-bottom: 50px;
+	}
+	&__item {
+		position: relative;
+		outline: none;
+		&:hover {
+			.portfolio__hover {
+				top: 0;
+				opacity: 1;
+			}
+			.hover-portfolio {
+				&__title,
+				&__subtitle,
+				&__icon {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+	&__hover {
+		position: absolute;
+		top: -40px;
+	    left: 0;
+	    z-index: 1000;
+	    width: 80%;
+	    height: 80%;
+	    padding: 15px 0;
+	    margin-top: 10%;
+	    margin-left: 10%;
+	    background: #f23030;
+	    border: 10px solid #fff;
+	    opacity: 0;
+	    transition: .35s ease;
+	    @media (max-width: 768px) {
+			top: 0;
+			opacity: .8;
+		}
+	}
+	@media (max-width: 768px) {
+		padding: 100px 0;
+		margin-bottom: 60px;
+	}
+	@media (max-width: 480px) {
+		padding: 60px 0;
+		margin-bottom: 30px;
+	}
+	&__btn {
+		text-align: center;
+	}
+}
+
+.hover-portfolio {
+	&__title {
+	    font-size: 28px;
+	    padding-bottom: 20px;
+	    font-weight: 300;
+	    color: #fff;
+	    position: relative;
+	    text-align: center;
+	    transform: translateY(-15px);
+	    transition: .35s ease .15s;
+	    &:after {
+	    	content: "";
+	    	position: absolute;
+	    	display: block;
+	    	height: 4px;
+	    	max-width: 40px;
+	    	width: 100%;
+	    	background: #fff;
+	    	top: 100%;
+	    	left: 50%;
+	    	transform: translate(-50%, -50%);
+	    }
+	    @media (max-width: 768px) {
+			transform: translateY(0);
+		}
+	}
+	&__subtitle {
+		font-size: 14px;
+    	line-height: 24px;
+    	font-style: italic;
+    	color: #fff;
+    	text-align: center;
+    	margin: 40px 0 20px 0;
+    	transform: translateY(-15px);
+    	transition: .35s ease .15s;
+    	@media (max-width: 768px) {
+			transform: translateY(0);
+		}
+	}
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 45px;
+		height: 45px;
+		background:#fff;
+		transition: .2s linear;
+		margin: 0 auto;
+		transform: translateY(-15px);
+		transition: .35s ease .15s;
+		svg {
+			width: 14px;
+			height: 14px;
+			color: #f23030;
+			transition: .2s linear;
+		}
+		&:hover {
+			background: #d12323;
+			svg {
+				color: #fff;
+			}
+		}
+		@media (max-width: 768px) {
+			transform: translateY(0);
+		}
+	}
+}

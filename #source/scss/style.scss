@@ -1,0 +1,187 @@
+//==========ПОДКЛЮЧЕНИЕ ШРИФТОВ==========//
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+//==========/ПОДКЛЮЧЕНИЕ ШРИФТОВ==========//
+.toTop {
+	width: 40px;
+	height: 40px;
+	background: #000;
+}
+//==========ОБНУЛЕНИЕ И ОБЩИЕ ПАРАМЕТРЫ==========//
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #252c37;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+h1, h2, h3 h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.btn {
+	display: inline-block;
+	color: #fff;
+	padding: 12px 32px;
+    font-size: 16px;
+    background: #f23030;
+    transition: .2s linear;
+    &:hover {
+    	background: #d12323;
+    }
+    @media (max-width: 550px) {
+		font-size: 15px;
+		padding: 8px 20px;
+	}
+}
+
+.radioPlay {
+	cursor: pointer;
+}
+
+.section {
+	&__head {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	&__title {
+		position: relative;
+		text-align: center;
+	    display: inline-block;
+	    padding: 25px 30px;
+	    font-size: 45px;
+	    text-transform: uppercase;
+		border: 2px solid #f23030;
+		&:before {
+			content: "";
+		    position: absolute;
+			top: 100%;
+		    left: 50%;
+		    border: solid transparent;
+			border-top-color: #f23030;
+		    border-width: 20px;
+		    margin-left: -20px;
+		}
+	}
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+.up {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: red;
+	transition: .4s linear;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	svg {
+		width: 20px;
+		color: #fff;
+	}
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+	&:hover {
+		background: #d12323;
+	}
+}
+
+//==========/ОБНУЛЕНИЕ И ОБЩИЕ ПАРАМЕТРЫ==========//
+
+//==========ОБОЛОЧКА==========//
+
+.wrapper {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 30%;
+	@media (max-width: 1230px) {
+		padding-left: 80px;
+		top: 35%;
+	}
+	@media (max-width: 768px) {
+		padding-left: 70px;
+		top: 30%;
+	}
+	@media (max-width: 550px) {
+		font-size: 16px;
+		top: 25%;
+	}
+	@media (max-width: 420px) {
+		padding-left: 10px;
+		top: 10%;
+	}
+}
+
+//==========ОБОЛОЧКА==========//
+
+//==========ОСНОВНАЯ СЕТКА==========//
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+//==========/ОСНОВНАЯ СЕТКА==========//
+
+//========ПОДКЛЮЧЕНИЕ ФАЙЛОВ СО СТИЛЯМИ========//
+
+@import "blocks/header.scss";
+@import "blocks/intro.scss";
+@import "blocks/album.scss";
+@import "blocks/art.scss";
+@import "blocks/featured.scss";
+@import "blocks/banner.scss";
+@import "blocks/work.scss";
+@import "blocks/signup.scss";
+@import "blocks/portfolio.scss";
+@import "blocks/events.scss";
+@import "blocks/team.scss";
+@import "blocks/meets.scss";
+@import "blocks/contact.scss";
+@import "blocks/footer.scss";
+
+//========/ПОДКЛЮЧЕНИЕ ФАЙЛОВ СО СТИЛЯМИ========//

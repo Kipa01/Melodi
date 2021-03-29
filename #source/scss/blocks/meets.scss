@@ -1,0 +1,132 @@
+.meets {
+	padding: 80px 0;
+	background: #252c37 url('../../../images/meets/meets-bg.png');
+    box-shadow: inset 0 0 10px #000;
+    margin-bottom: 100px;
+    .section__title {
+    	color: #fff;
+    	@media (max-width: 480px) {
+    		font-size: 40px;
+    	}
+    }
+    .container {
+    	@media (max-width: 1190px) {
+    		max-width: 970px;
+    	}
+    }
+    &__body {
+    	position: relative;
+    }
+   	&__map {
+   		width: 100%;
+	    max-width: 1080px;
+	    margin: 0 auto;
+   	}
+    &__marker {
+    	position: absolute;
+	    &:hover {
+	    	.meets__place {
+	    		display: block;
+	    	}
+	    }
+	    img {
+	    	display: block;
+		    max-width: 100%;
+		    height: auto;
+		    @media (max-width: 768px) {
+				max-width: 18px;
+	    	}
+	    }
+	   	.meets__place {
+	    	color: #fff;
+	    	background: #000;
+	    	text-align: center;
+	    	padding: 4px 8px;
+    		border-radius: 2px;
+    		position: absolute;
+    		top: -110%;
+    		left: -30%;
+    		display: none;
+    		transition: .2s linear;
+    		&:after {
+    			content: "";
+			    position: absolute;
+			    top: 100%;
+			    left: 50%;
+			    border: solid transparent;
+			    border-top-color: #000;
+			   	border-width: 5px;
+				margin-left: -5px;	
+			}
+	    }
+	    &.usa {
+	    	top: 35%;
+    		left: 17%;
+    		@media (max-width: 1190px) {
+				top: 34%;
+	    	}
+	    	@media (max-width: 768px) {
+	    		top: 35%;
+				left: 19.5%;
+	    	}
+	    }
+	    &.brazil {
+	    	top: 64%;
+    		left: 27%;
+    		span {
+    			left: -10%;
+    		}
+    		@media (max-width: 1190px) {
+				top: 63%;
+				left: 28%;
+	    	}
+	    	@media (max-width: 768px) {
+				top: 63%;
+				left: 30%;
+	    	}
+	    }
+	    &.russia {
+	    	top: 18%;
+    		left: 70%;
+    		span {
+    			left: -11%;
+    		}
+    		@media (max-width: 1190px) {
+				left: 73.5%;
+	    	}
+	    	@media (max-width: 768px) {
+				left: 74%;
+	    	}
+	    }
+	    &.india {
+	    	top: 45%;
+    		left: 64%;
+    		span {
+    			left: -8%;
+    		}
+    		@media (max-width: 1190px) {
+				top: 44%;
+				left: 67%;
+	    	}
+	    }
+	    &.soutafrica {
+	    	top: 68%;
+    		left: 49%;
+    		span {
+    			left: -23%;
+    		}
+    		@media (max-width: 1190px) {
+				top: 67%;
+				left: 51.5%;
+	    	}
+	    }
+    }
+    @media (max-width: 768px) {
+		padding: 100px 0;
+		margin-bottom: 60px;
+	}
+	@media (max-width: 480px) {
+		padding: 60px 0;
+		margin-bottom: 30px;
+	}
+}

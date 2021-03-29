@@ -1,0 +1,59 @@
+.banner {
+	padding: 130px 0;
+	margin-bottom: 100px;
+	background: url('../../../images/art/art-bg.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	&__inner {
+		padding: 40px;
+		background: #f23030;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__content {
+		flex-basis: 70%;
+		@media (max-width: 768px) {
+			flex-basis: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+	&__title {
+		margin-top: 0;
+	    font-size: 26px;
+	    line-height: 36px;
+	    color: #fff;
+	    font-weight: 700;
+	    margin-bottom: 10px;
+	}
+	&__text {
+		font-style: italic;
+	    color: #fff;
+	    font-size: 16px;
+	    line-height: 26px;
+	}
+	&__btn {
+		background: #fff;
+		color: #000;
+		border-color: #ccc;
+		&:hover {
+			background-color: #e6e6e6;
+    		border-color: #adadad;
+		}
+		@media (max-width: 768px) {
+			margin: 0 auto;
+		}
+	}
+	@media (max-width: 768px) {
+		padding: 100px 0;
+		margin-bottom: 60px;
+	}
+	@media (max-width: 480px) {
+		padding: 60px 0;
+		margin-bottom: 30px;
+	}
+}

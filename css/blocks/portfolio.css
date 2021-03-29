@@ -1,0 +1,24 @@
+.hover-portfolio__title {
+  font-size: 28px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: #fff;
+  position: relative; }
+  .hover-portfolio__title:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 4px;
+    max-width: 40px;
+    background: #fff;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.hover-portfolio__subtitle {
+  font-size: 14px;
+  line-height: 24px;
+  font-style: italic; }
